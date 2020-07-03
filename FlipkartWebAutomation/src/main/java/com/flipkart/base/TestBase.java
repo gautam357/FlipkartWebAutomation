@@ -6,12 +6,10 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.Test;
-
 import com.flipkart.configReader.ConFigReader;
 import com.flipkart.utilities.TestUtility;
 
-@Test
+
 public class TestBase {
 	public static WebDriver driver;
 	public static Properties prop;

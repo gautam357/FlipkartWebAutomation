@@ -1,0 +1,65 @@
+package com.flipkart.login;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import com.flipkart.base.TestBase;
+
+public class LoginWithEmail extends TestBase {
+
+	@FindBy(xpath = "//a[@class='_3Ep39l']")
+	WebElement clickOnLoginForm;
+
+	@FindBy(xpath = "//button[@class='_2AkmmA _29YdH8']")
+	WebElement closeLoginForm;
+
+	@FindBy(xpath = "//span[@class='_1hgiYz']//span[contains(text(),'Login')]")
+	WebElement openLoginPageVerification;
+
+	@FindBy(xpath = "//input[@class='_2zrpKA _1dBPDZ']")
+	WebElement inputLoginUsername;
+
+	@FindBy(xpath = "//input[@class='_2zrpKA _3v41xv _1dBPDZ']")
+	WebElement inputLoginPassword;
+
+	@FindBy(xpath = "//button[@class='_2AkmmA _1LctnI _7UHT_c']")
+	WebElement loginSubmit;
+
+	@FindBy(xpath = "//span[contains(text(),'Please enter valid Email ID')]")
+	WebElement WrongEmailPasswordMessages;
+
+	public String dynomicLoginVerification(String userName) {
+		return driver.findElement(By.xpath("//div[contains(text(),'" + userName + "')]")).getText();
+	}
+
+	public LoginWithEmail() {
+		PageFactory.initElements(driver, this);
+	}
+
+	public String closeLoginForm() {
+		closeLoginForm.click();
+		return clickOnLoginForm.getText();
+
+	}
+
+	public String openLoginPage() {
+		clickOnLoginForm.click();
+		return openLoginPageVerification.getText();
+	}
+
+	public String tsetCaseLoginWithEmail(String loginEmail, String pwd, String loginverificationName) {
+		inputLoginUsername.sendKeys(loginEmail);
+		inputLoginPassword.sendKeys(pwd);
+		loginSubmit.click();
+		return dynomicLoginVerification(loginverificationName);
+	}
+
+	public String wrongEmailPassword(String loginEmail, String pwd, String loginverificationName) throws InterruptedException {
+		inputLoginUsername.sendKeys(loginEmail);
+		inputLoginPassword.sendKeys(pwd);
+		loginSubmit.click();
+		return WrongEmailPasswordMessages.getText();
+	}
+}

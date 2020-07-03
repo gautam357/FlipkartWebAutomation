@@ -1,17 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="6218" started-at="2020-07-03T09:14:24Z" finished-at="2020-07-03T09:14:30Z">
+  <suite name="Default suite" duration-ms="7619" started-at="2020-07-03T13:46:58Z" finished-at="2020-07-03T13:47:06Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="6218" started-at="2020-07-03T09:14:24Z" finished-at="2020-07-03T09:14:30Z">
-      <class name="com.flipkart.base.TestBase">
-        <test-method status="PASS" signature="initialization()[pri:0, instance:com.flipkart.base.TestBase@523884b2]" name="initialization" duration-ms="6190" started-at="2020-07-03T14:44:24Z" finished-at="2020-07-03T14:44:30Z">
+    <test name="Default test" duration-ms="7619" started-at="2020-07-03T13:46:58Z" finished-at="2020-07-03T13:47:06Z">
+      <class name="com.flipkart.loginTest.TestCaseLoginWithEmail">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.flipkart.loginTest.TestCaseLoginWithEmail@685cb137]" name="setUp" is-config="true" duration-ms="4142" started-at="2020-07-03T19:16:58Z" finished-at="2020-07-03T19:17:02Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- initialization -->
-      </class> <!-- com.flipkart.base.TestBase -->
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testCaseOfWrongEmailPAssword()[pri:1, instance:com.flipkart.loginTest.TestCaseLoginWithEmail@685cb137]" name="testCaseOfWrongEmailPAssword" duration-ms="1339" started-at="2020-07-03T19:17:02Z" finished-at="2020-07-03T19:17:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCaseOfWrongEmailPAssword -->
+        <test-method status="PASS" signature="testCaseCloseLoginForm()[pri:2, instance:com.flipkart.loginTest.TestCaseLoginWithEmail@685cb137]" name="testCaseCloseLoginForm" duration-ms="137" started-at="2020-07-03T19:17:04Z" finished-at="2020-07-03T19:17:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCaseCloseLoginForm -->
+        <test-method status="PASS" signature="testCaseOpenLoginForm()[pri:3, instance:com.flipkart.loginTest.TestCaseLoginWithEmail@685cb137]" name="testCaseOpenLoginForm" duration-ms="143" started-at="2020-07-03T19:17:04Z" finished-at="2020-07-03T19:17:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCaseOpenLoginForm -->
+        <test-method status="PASS" signature="testCaseOfLoginWithEmail()[pri:4, instance:com.flipkart.loginTest.TestCaseLoginWithEmail@685cb137]" name="testCaseOfLoginWithEmail" duration-ms="1597" started-at="2020-07-03T19:17:04Z" finished-at="2020-07-03T19:17:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCaseOfLoginWithEmail -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.flipkart.loginTest.TestCaseLoginWithEmail@685cb137]" name="tearDown" is-config="true" duration-ms="213" started-at="2020-07-03T19:17:06Z" finished-at="2020-07-03T19:17:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.flipkart.loginTest.TestCaseLoginWithEmail -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
