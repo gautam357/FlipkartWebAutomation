@@ -6,7 +6,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import com.flipkart.configReader.ConFigReader;
+import com.flipkart.configReader.ConfigReader;
 import com.flipkart.utilities.TestUtility;
 
 
@@ -17,7 +17,7 @@ public class TestBase {
 	public static String nodeURL;
 
 	public static void initialization() {
-		String browserName = ConFigReader.configReader();
+		String browserName = ConfigReader.configReader();
 		if (browserName.equals("chrome")) {
 			System.setProperty("webdriver.chrome.driver",
 					"/Users/drivezy/git/AutomationWebProject/AutomationWebProject/driver/chromedriver");
@@ -33,6 +33,6 @@ public class TestBase {
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().pageLoadTimeout(TestUtility.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(TestUtility.IMPLICIT_WAIT, TimeUnit.SECONDS);
-		driver.get(ConFigReader.getUrl());
+		driver.get(ConfigReader.getUrl());
 	}
 }

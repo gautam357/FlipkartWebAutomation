@@ -19,18 +19,21 @@ public class LoginWithEmail extends TestBase {
 	WebElement openLoginPageVerification;
 
 	@FindBy(xpath = "//input[@class='_2zrpKA _1dBPDZ']")
+	static
 	WebElement inputLoginUsername;
 
 	@FindBy(xpath = "//input[@class='_2zrpKA _3v41xv _1dBPDZ']")
+	static
 	WebElement inputLoginPassword;
 
 	@FindBy(xpath = "//button[@class='_2AkmmA _1LctnI _7UHT_c']")
+	static
 	WebElement loginSubmit;
 
 	@FindBy(xpath = "//span[contains(text(),'Please enter valid Email ID')]")
 	WebElement WrongEmailPasswordMessages;
 
-	public String dynomicLoginVerification(String userName) {
+	public static String dynomicLoginVerification(String userName) {
 		return driver.findElement(By.xpath("//div[contains(text(),'" + userName + "')]")).getText();
 	}
 

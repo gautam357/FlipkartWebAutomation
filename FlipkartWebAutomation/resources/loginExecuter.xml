@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Login Page" parallel="false" thread-count="4"
+	preserve-order="true">
+	<listeners>
+		<listener class-name="com.flipkart.utilities.TestNgListener" />
+	</listeners>
+	<test name="Test case of Bike Filter">
+		<classes>
+			<class name="com.flipkart.loginTest.TestCaseLoginWithEmail" />
+		</classes>
+	</test>
+
+</suite> 

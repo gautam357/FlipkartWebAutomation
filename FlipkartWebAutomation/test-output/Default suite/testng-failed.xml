@@ -3,13 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.flipkart.loginTest.TestCaseLoginWithEmail">
+      <class name="com.flipkart.loginTest.TestingItemType">
         <methods>
-          <include name="testCaseOfWrongEmailPAssword"/>
-          <include name="tearDown"/>
+          <include name="test"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- com.flipkart.loginTest.TestCaseLoginWithEmail -->
+      </class> <!-- com.flipkart.loginTest.TestingItemType -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

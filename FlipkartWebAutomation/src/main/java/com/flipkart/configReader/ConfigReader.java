@@ -4,7 +4,7 @@ import java.io.FileInputStream;
 import java.io.InputStream;
 import java.util.Properties;
 
-public class ConFigReader {
+public class ConfigReader {
 	public static Properties prop;
 
 	public static String configReader() {
@@ -40,5 +40,9 @@ public class ConFigReader {
 
 	public static String getLoginVerificationName() {
 		return prop.getProperty("loginVerificationName");
+	}
+	
+	public static String getSeetName() {
+		return prop.getProperty("excelSheetName");
 	}
 }
