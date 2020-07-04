@@ -9,6 +9,7 @@
 	<test name="Test case of Bike Filter">
 		<classes>
 			<class name="com.flipkart.loginTest.TestCaseLoginWithEmail" />
+			<class name="com.flipkart.itemsTypeTestCases.TestingItemType" />
 		</classes>
 	</test>
 

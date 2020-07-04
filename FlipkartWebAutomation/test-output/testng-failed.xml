@@ -1,14 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test name="Default test(failed)">
+<suite thread-count="4" guice-stage="DEVELOPMENT" name="Failed suite [Login Page]">
+  <listeners>
+    <listener class-name="com.flipkart.utilities.TestNgListener"/>
+  </listeners>
+  <test name="Test case of Bike Filter(failed)">
     <classes>
-      <class name="com.flipkart.loginTest.TestingItemType">
+      <class name="com.flipkart.loginTest.TestCaseLoginWithEmail">
         <methods>
-          <include name="test"/>
+          <include name="tearDown"/>
           <include name="setUp"/>
+          <include name="testCaseOfLoginWithEmail"/>
         </methods>
-      </class> <!-- com.flipkart.loginTest.TestingItemType -->
+      </class> <!-- com.flipkart.loginTest.TestCaseLoginWithEmail -->
+      <class name="com.flipkart.itemsTypeTestCases.TestingItemType">
+        <methods>
+          <include name="setUp"/>
+          <include name="test"/>
+        </methods>
+      </class> <!-- com.flipkart.itemsTypeTestCases.TestingItemType -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Test case of Bike Filter(failed) -->
+</suite> <!-- Failed suite [Login Page] -->

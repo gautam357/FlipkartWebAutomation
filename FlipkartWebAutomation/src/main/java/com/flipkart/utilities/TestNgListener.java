@@ -8,6 +8,8 @@ import org.testng.ITestResult;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.markuputils.ExtentColor;
+import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.flipkart.ExtendReportListeners.ExtentReport;
 import com.flipkart.base.TestBase;
 
@@ -27,6 +29,7 @@ public class TestNgListener extends TestBase implements ITestListener {
 	public void onTestSuccess(ITestResult result) {
 		// TODO Auto-generated method stub
 		extentTest.get().log(Status.PASS, "Test Passed");
+
 	}
 
 	public void onTestFailure(ITestResult result) {
@@ -53,6 +56,8 @@ public class TestNgListener extends TestBase implements ITestListener {
 
 	public void onTestSkipped(ITestResult result) {
 		// TODO Auto-generated method stub
+
+		test.skip(result.getThrowable());
 
 	}
 

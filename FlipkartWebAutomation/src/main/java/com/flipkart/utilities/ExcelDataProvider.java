@@ -16,7 +16,7 @@ public class ExcelDataProvider {
 		ArrayList<String> al = new ArrayList<String>();
 		// This is for path for excel file
 		FileInputStream inputfile = new FileInputStream(
-				"/Users/drivezy/git/FlipkartWebAutomation/FlipkartWebAutomation/src/main/java/com/divezy/testdata/TestingData.xlsx");
+				"/Users/drivezy/git/FlipkartWebAutomation/FlipkartWebAutomation/src/main/java/com/flipkart/testdata/TestingData.xlsx");
 
 		// Get the all Sheets
 		// Count the Sheets
@@ -48,7 +48,7 @@ public class ExcelDataProvider {
 					if (column.getStringCellValue().equalsIgnoreCase("testData")) {
 						columnNumber = k;
 					}
-					k++; 
+					k++;
 				}
 				// Once column is identified then scan entry test case column to identify
 				while (rows.hasNext()) {

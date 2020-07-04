@@ -52,7 +52,8 @@ public class LoginWithEmail extends TestBase {
 		return openLoginPageVerification.getText();
 	}
 
-	public String tsetCaseLoginWithEmail(String loginEmail, String pwd, String loginverificationName) {
+	public String tsetCaseLoginWithEmail(String loginEmail, String pwd, String loginverificationName) throws InterruptedException {
+		Thread.sleep(2000);
 		inputLoginUsername.sendKeys(loginEmail);
 		inputLoginPassword.sendKeys(pwd);
 		loginSubmit.click();
@@ -60,6 +61,7 @@ public class LoginWithEmail extends TestBase {
 	}
 
 	public String wrongEmailPassword(String loginEmail, String pwd, String loginverificationName) throws InterruptedException {
+		Thread.sleep(2000);
 		inputLoginUsername.sendKeys(loginEmail);
 		inputLoginPassword.sendKeys(pwd);
 		loginSubmit.click();
