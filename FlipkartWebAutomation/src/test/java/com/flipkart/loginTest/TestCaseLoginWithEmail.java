@@ -50,7 +50,7 @@ public class TestCaseLoginWithEmail extends TestBase {
 	@Test(priority = 4)
 	public void testCaseOfLoginWithEmail() throws InterruptedException {
 
-		String validationName = objLoginWithEMail.tsetCaseLoginWithEmail(ConfigReader.getLoginEmail(),
+		String validationName = objLoginWithEMail.loginWithEmail(ConfigReader.getLoginEmail(),
 				ConfigReader.getLoginPassword(), ConfigReader.getLoginVerificationName());
 		Assert.assertEquals("login is not ", ConfigReader.getLoginVerificationName(), validationName);
 		System.out.println("Test case4 done");

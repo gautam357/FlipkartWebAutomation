@@ -17,20 +17,14 @@ public class Products extends TestBase {
 		PageFactory.initElements(driver, this);
 	}
 
-	public void contentTyps(String actualContentName) throws InterruptedException {
+	public void productTyps(String actualContentName) throws InterruptedException {
 		LoginWithEmail loginWithId = new LoginWithEmail();
 		loginWithId.getLogin();
-		int cotentSize = listDataTyps.size();
-		System.out.println(cotentSize);
-		System.out.println(actualContentName);
-
 		for (WebElement listDataTyp : listDataTyps) {
 			String contentNameFromList = listDataTyp.getText();
-
-			System.out.println(contentNameFromList);
-
 			if (contentNameFromList.equalsIgnoreCase(actualContentName)) {
 				TestUtility.moveToElement(listDataTyp);
+				break;
 			}
 		}
 	}

@@ -53,7 +53,7 @@ public class LoginWithEmail extends TestBase {
 		return openLoginPageVerification.getText();
 	}
 
-	private String loginWithEmail(String loginEmail, String pwd, String loginverificationName) throws InterruptedException {
+	public String loginWithEmail(String loginEmail, String pwd, String loginverificationName) throws InterruptedException {
 		Thread.sleep(2000);
 		inputLoginUsername.sendKeys(loginEmail);
 		inputLoginPassword.sendKeys(pwd);

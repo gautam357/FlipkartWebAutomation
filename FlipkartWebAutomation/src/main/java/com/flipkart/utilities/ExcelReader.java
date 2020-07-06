@@ -17,16 +17,16 @@ public class ExcelReader {
 		return ExcelDataProvider.getExelData("wrongMessagesShowing", "TestingData").get(1);
 	}
 
-	public static String getItemTypeName() throws IOException {
-		return ExcelDataProvider.getExelData("itemTypeName", "TestingData").get(1);
+	public static String getProductTypeVerification() throws IOException {
+		return ExcelDataProvider.getExelData("productTypeVerification", "TestingData").get(1);
 	}
 
-	public static String getItemsTypeVErification() throws IOException {
-		return ExcelDataProvider.getExelData("itemsTypeVerification", "TestingData").get(1);
-	}
-
-	public static String getContentType() throws IOException {
+	public static String getProduct() throws IOException {
 		return ExcelDataProvider.getExelData("productName", "TestingData").get(1);
+	}
+	
+	public static String getProductType() throws IOException{
+		return ExcelDataProvider.getExelData("productTypeName", "TestingData").get(1);
 	}
 
 }

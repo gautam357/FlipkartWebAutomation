@@ -1,7 +1,6 @@
 package com.flipkarts.productsTesting;
 
 import java.io.IOException;
-
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -21,7 +20,7 @@ public class ProductsTesting extends TestBase {
 
 	@Test
 	public void testContentTypes() throws IOException, InterruptedException {
-		contentObj.contentTyps(ExcelReader.getContentType());
+		contentObj.productTyps(ExcelReader.getProduct());
 	}
 
 	@AfterTest
