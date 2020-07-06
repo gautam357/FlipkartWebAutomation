@@ -25,4 +25,8 @@ public class ExcelReader {
 		return ExcelDataProvider.getExelData("itemsTypeVerification", "TestingData").get(1);
 	}
 
+	public static String getContentType() throws IOException {
+		return ExcelDataProvider.getExelData("productName", "TestingData").get(1);
+	}
+
 }

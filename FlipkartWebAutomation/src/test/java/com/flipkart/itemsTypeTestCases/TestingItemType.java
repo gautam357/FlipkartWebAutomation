@@ -22,7 +22,7 @@ public class TestingItemType extends TestBase {
 	}
 
 	@Test
-	public void test() throws IOException {
+	public void test() throws IOException, InterruptedException {
 		
 		Assert.assertEquals("Item is not there", ExcelReader.getItemsTypeVErification(),
 				item.listType(ExcelReader.getItemTypeName()));

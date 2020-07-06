@@ -24,10 +24,9 @@ public class ItemsType extends TestBase {
 		PageFactory.initElements(driver, this);
 	}
 
-	public String listType(String itemTypeName) {
+	public String listType(String itemTypeName) throws InterruptedException {
 		LoginWithEmail loginWithId = new LoginWithEmail();
-		loginWithId.tsetCaseLoginWithEmail(ConfigReader.getLoginEmail(), ConfigReader.getLoginPassword(),
-				ConfigReader.getLoginVerificationName());
+		loginWithId. getLogin();
 		List<WebElement> lists = itemsType;
 		for (WebElement list : lists) {
 			String str = list.getText();

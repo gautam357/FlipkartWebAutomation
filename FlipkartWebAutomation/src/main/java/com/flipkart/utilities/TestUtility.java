@@ -6,13 +6,15 @@ import java.io.IOException;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 
 import com.flipkart.base.TestBase;
 
-public class TestUtility extends TestBase{
+public class TestUtility extends TestBase {
 	public static long PAGE_LOAD_TIMEOUT = 2000;
 	public static long IMPLICIT_WAIT = 10;
-	
+
 	public static String takeScreenShort(String testCaseName) throws IOException {
 
 		TakesScreenshot screen = (TakesScreenshot) driver;
@@ -21,5 +23,10 @@ public class TestUtility extends TestBase{
 		String str = "./ScreenShorts/" + testCaseName + ".png";
 		FileUtils.copyFile(source, new File(str));
 		return str;
+	}
+
+	public static void moveToElement(WebElement element) {
+		Actions action = new Actions(driver);
+		action.moveToElement(element).build().perform();
 	}
 }

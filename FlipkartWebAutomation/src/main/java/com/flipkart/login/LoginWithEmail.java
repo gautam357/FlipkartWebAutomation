@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.flipkart.base.TestBase;
+import com.flipkart.configReader.ConfigReader;
 
 public class LoginWithEmail extends TestBase {
 
@@ -52,7 +53,7 @@ public class LoginWithEmail extends TestBase {
 		return openLoginPageVerification.getText();
 	}
 
-	public String tsetCaseLoginWithEmail(String loginEmail, String pwd, String loginverificationName) throws InterruptedException {
+	private String loginWithEmail(String loginEmail, String pwd, String loginverificationName) throws InterruptedException {
 		Thread.sleep(2000);
 		inputLoginUsername.sendKeys(loginEmail);
 		inputLoginPassword.sendKeys(pwd);
@@ -66,5 +67,10 @@ public class LoginWithEmail extends TestBase {
 		inputLoginPassword.sendKeys(pwd);
 		loginSubmit.click();
 		return WrongEmailPasswordMessages.getText();
+	}
+	
+	public void getLogin() throws InterruptedException {
+		loginWithEmail(ConfigReader.getLoginEmail(), ConfigReader.getLoginPassword(),
+				ConfigReader.getLoginVerificationName());
 	}
 }
