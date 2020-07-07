@@ -20,7 +20,7 @@ public class LoginWithEmail extends TestBase {
 	WebElement openLoginPageVerification;
 
 	@FindBy(xpath = "//input[@class='_2zrpKA _1dBPDZ']")
-	static
+	
 	WebElement inputLoginUsername;
 
 	@FindBy(xpath = "//input[@class='_2zrpKA _3v41xv _1dBPDZ']")

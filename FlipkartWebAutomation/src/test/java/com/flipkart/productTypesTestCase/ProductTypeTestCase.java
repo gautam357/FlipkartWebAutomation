@@ -19,13 +19,17 @@ public class ProductTypeTestCase extends TestBase {
 	}
 
 	@Test
-	public void testCaseProductType() throws IOException, InterruptedException {
-		item.productType(ExcelReader.getProductType());
-//		Assert.assertEquals("Item is not there", ExcelReader.getProductType(),
-//				item.productType(ExcelReader.getProductType()));
+	public void testCaseProductType() throws IOException, InterruptedException, ClassNotFoundException {
+		Object productTypeObject = item.productType(ExcelReader.getProductType(),
+				(Object) (ExcelReader.getProductType()));
+
+		System.out.println(productTypeObject);
+		System.out.println((Object) (ExcelReader.getProductType()));
+		Assert.assertEquals(productTypeObject, (Object) (ExcelReader.getProductType()));
+
 	}
 
-//	public void tearDown() {
-//		driver.quit();
-//	}
+	public void tearDown() {
+		driver.quit();
+	}
 }

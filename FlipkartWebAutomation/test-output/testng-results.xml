@@ -2,24 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="10349" started-at="2020-07-06T20:28:16Z" finished-at="2020-07-06T20:28:27Z">
+  <suite name="Default suite" duration-ms="9830" started-at="2020-07-07T14:02:49Z" finished-at="2020-07-07T14:02:59Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="10349" started-at="2020-07-06T20:28:16Z" finished-at="2020-07-06T20:28:27Z">
-      <class name="com.flipkarts.productsTesting.ProductsTesting">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.flipkarts.productsTesting.ProductsTesting@685cb137]" name="setUp" is-config="true" duration-ms="4966" started-at="2020-07-07T01:58:16Z" finished-at="2020-07-07T01:58:21Z">
+    <test name="Default test" duration-ms="9830" started-at="2020-07-07T14:02:49Z" finished-at="2020-07-07T14:02:59Z">
+      <class name="com.flipkart.productTypesTestCase.ProductTypeTestCase">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.flipkart.productTypesTestCase.ProductTypeTestCase@6a4f787b]" name="setUp" is-config="true" duration-ms="4513" started-at="2020-07-07T19:32:49Z" finished-at="2020-07-07T19:32:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testContentTypes()[pri:0, instance:com.flipkarts.productsTesting.ProductsTesting@685cb137]" name="testContentTypes" duration-ms="5213" started-at="2020-07-07T01:58:21Z" finished-at="2020-07-07T01:58:26Z">
+        <test-method status="PASS" signature="testCaseProductType()[pri:0, instance:com.flipkart.productTypesTestCase.ProductTypeTestCase@6a4f787b]" name="testCaseProductType" duration-ms="5293" started-at="2020-07-07T19:32:54Z" finished-at="2020-07-07T19:32:59Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testContentTypes -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.flipkarts.productsTesting.ProductsTesting@685cb137]" name="tearDown" is-config="true" duration-ms="139" started-at="2020-07-07T01:58:26Z" finished-at="2020-07-07T01:58:27Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.flipkarts.productsTesting.ProductsTesting -->
+        </test-method> <!-- testCaseProductType -->
+      </class> <!-- com.flipkart.productTypesTestCase.ProductTypeTestCase -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

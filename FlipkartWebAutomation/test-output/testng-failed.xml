@@ -5,7 +5,7 @@
     <classes>
       <class name="com.flipkart.productTypesTestCase.ProductTypeTestCase">
         <methods>
-          <include name="test"/>
+          <include name="testCaseProductType"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- com.flipkart.productTypesTestCase.ProductTypeTestCase -->
