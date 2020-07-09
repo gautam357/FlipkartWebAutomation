@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="9830" started-at="2020-07-07T14:02:49Z" finished-at="2020-07-07T14:02:59Z">
+  <suite name="Default suite" duration-ms="10847" started-at="2020-07-09T11:46:12Z" finished-at="2020-07-09T11:46:23Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="9830" started-at="2020-07-07T14:02:49Z" finished-at="2020-07-07T14:02:59Z">
-      <class name="com.flipkart.productTypesTestCase.ProductTypeTestCase">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.flipkart.productTypesTestCase.ProductTypeTestCase@6a4f787b]" name="setUp" is-config="true" duration-ms="4513" started-at="2020-07-07T19:32:49Z" finished-at="2020-07-07T19:32:54Z">
+    <test name="Default test" duration-ms="10847" started-at="2020-07-09T11:46:12Z" finished-at="2020-07-09T11:46:23Z">
+      <class name="com.flipkart.mobileTestCase.AppleMobTestCase">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.flipkart.mobileTestCase.AppleMobTestCase@6a4f787b]" name="setUp" is-config="true" duration-ms="4620" started-at="2020-07-09T17:16:12Z" finished-at="2020-07-09T17:16:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testCaseProductType()[pri:0, instance:com.flipkart.productTypesTestCase.ProductTypeTestCase@6a4f787b]" name="testCaseProductType" duration-ms="5293" started-at="2020-07-07T19:32:54Z" finished-at="2020-07-07T19:32:59Z">
+        <test-method status="PASS" signature="testCaseOpenPage()[pri:0, instance:com.flipkart.mobileTestCase.AppleMobTestCase@6a4f787b]" name="testCaseOpenPage" duration-ms="6188" started-at="2020-07-09T17:16:16Z" finished-at="2020-07-09T17:16:23Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testCaseProductType -->
-      </class> <!-- com.flipkart.productTypesTestCase.ProductTypeTestCase -->
+        </test-method> <!-- testCaseOpenPage -->
+      </class> <!-- com.flipkart.mobileTestCase.AppleMobTestCase -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

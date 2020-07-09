@@ -29,8 +29,12 @@ public class ProductType extends TestBase {
 		PageFactory.initElements(driver, this);
 	}
 
+	/*
+	 * I have put the generic method for product type
+	 */
 	public <T> Object productType(String productName, Object productTypeClass)
 			throws InterruptedException, IOException {
+		driver.findElements(By.tagName("a"));
 		Products product = new Products();
 		product.productTyps(ExcelReader.getProduct());
 		for (WebElement productType : productTypes) {
@@ -43,4 +47,8 @@ public class ProductType extends TestBase {
 		return productTypeClass;
 	}
 
+	public void openProduct(String productType) throws InterruptedException, IOException {
+		productType(productType, (Object) (productType));
+	}
+//ExcelReader.getProductType()
 }

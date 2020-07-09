@@ -22,9 +22,6 @@ public class ProductTypeTestCase extends TestBase {
 	public void testCaseProductType() throws IOException, InterruptedException, ClassNotFoundException {
 		Object productTypeObject = item.productType(ExcelReader.getProductType(),
 				(Object) (ExcelReader.getProductType()));
-
-		System.out.println(productTypeObject);
-		System.out.println((Object) (ExcelReader.getProductType()));
 		Assert.assertEquals(productTypeObject, (Object) (ExcelReader.getProductType()));
 
 	}

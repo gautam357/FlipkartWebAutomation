@@ -24,9 +24,20 @@ public class ExcelReader {
 	public static String getProduct() throws IOException {
 		return ExcelDataProvider.getExelData("productName", "TestingData").get(1);
 	}
-	
-	public static String getProductType() throws IOException{
+
+	public static String getProductSamsung() throws IOException {
 		return ExcelDataProvider.getExelData("productTypeName", "TestingData").get(1);
 	}
 
+	public static String getSamsungPageVerificationMessages() throws IOException {
+		return ExcelDataProvider.getExelData("samsungPageVerificationMessage", "TestingData").get(1);
+	}
+
+	public static String getProductApple() throws IOException {
+		return ExcelDataProvider.getExelData("productTypeName", "TestingData").get(2);
+	}
+	
+	public static String getApplePageVerificationMessage() throws IOException {
+		return ExcelDataProvider.getExelData("AppleMobPageVerificationMessage", "TestingData").get(1); 
+	}
 }
