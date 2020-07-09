@@ -1,7 +1,6 @@
 package com.flipkart.mobileTestCase;
 
 import java.io.IOException;
-
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -19,7 +18,11 @@ public class AppleMobTestCase extends TestBase {
 		initialization();
 		objAppleMob = new AppleMob();
 	}
-
+	
+	
+	/*
+	 * This is test case for open the Apple mobile page
+	 */
 	@Test
 	public void testCaseOpenPage() throws InterruptedException, IOException {
 

@@ -14,14 +14,19 @@ public class SamsungMob extends TestBase {
 	@FindBy(xpath = "//h1[@class='_30P0WS'][contains(text(),'Samsung Mobile Phone')]")
 	WebElement samsungOpenPageMessage;
 
+	/*
+	 * Initialize the WebElament variable   
+	 * */
 	public SamsungMob() {
 		PageFactory.initElements(driver, this);
 	}
 
+	/*
+	 * click on the Samsung mob button and It will return message of samsung page
+	 * */
 	public String openSamsungMobPage() throws InterruptedException, IOException {
 		ProductType objProdType = new ProductType();
 		objProdType.openProduct(ExcelReader.getProductSamsung());
-		System.out.println(samsungOpenPageMessage.getText());
 		return samsungOpenPageMessage.getText();
 	}
 }

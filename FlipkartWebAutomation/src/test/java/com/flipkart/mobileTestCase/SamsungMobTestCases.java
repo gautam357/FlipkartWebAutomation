@@ -19,6 +19,9 @@ public class SamsungMobTestCases extends TestBase {
 		objSamsungMob = new SamsungMob();
 	}
 
+	/*
+	 * This is test case for open the samsung mobile page
+	 */
 	@Test
 	public void testcaseOpenSmasungPage() throws InterruptedException, IOException {
 

@@ -15,11 +15,17 @@ public class AppleMob extends TestBase {
 	@FindBy(xpath = "//h1[@class='_30P0WS'][contains(text(),'Apple Store')]")
 	WebElement messageOpenAppleMobPage;
 
+	/*
+	 * Initialize the WebElament variable
+	 */
 	public AppleMob() {
 
 		PageFactory.initElements(driver, this);
 	}
 
+	/*
+	 * click on the Apple mob button and It will return message of Apple page
+	 */
 	public String openAppleMobilePage() throws InterruptedException, IOException {
 		ProductType objProdType = new ProductType();
 		objProdType.openProduct(ExcelReader.getProductApple());
