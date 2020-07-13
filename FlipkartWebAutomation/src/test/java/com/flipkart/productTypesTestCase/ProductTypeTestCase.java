@@ -20,9 +20,9 @@ public class ProductTypeTestCase extends TestBase {
 
 	@Test
 	public void testCaseProductType() throws IOException, InterruptedException, ClassNotFoundException {
-		Object productTypeObject = item.productType(ExcelReader.getProductType(),
-				(Object) (ExcelReader.getProductType()));
-		Assert.assertEquals(productTypeObject, (Object) (ExcelReader.getProductType()));
+		Object productTypeObject = item.productType(ExcelReader.getProductSamsung(),
+				(Object) (ExcelReader.getProductSamsung()));
+		Assert.assertEquals(productTypeObject, (Object) (ExcelReader.getProductSamsung()));
 
 	}
 
