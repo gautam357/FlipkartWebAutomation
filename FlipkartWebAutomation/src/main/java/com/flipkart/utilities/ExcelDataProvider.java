@@ -45,7 +45,7 @@ public class ExcelDataProvider {
 				int columnNumber = 0;
 				while (columns.hasNext()) {
 					Cell column = columns.next();
-					if (column.getStringCellValue().equalsIgnoreCase("testData")) {
+					if (column.getStringCellValue().equalsIgnoreCase(testData)) {
 						columnNumber = k;
 					}
 					k++;

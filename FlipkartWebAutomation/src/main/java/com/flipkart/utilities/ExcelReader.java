@@ -1,6 +1,7 @@
 package com.flipkart.utilities;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class ExcelReader {
 
@@ -39,5 +40,13 @@ public class ExcelReader {
 	
 	public static String getApplePageVerificationMessage() throws IOException {
 		return ExcelDataProvider.getExelData("AppleMobPageVerificationMessage", "TestingData").get(1); 
+	}
+	
+	public static ArrayList<String> getBestBatteryPhones() throws IOException{
+		ArrayList<String> phoneList = new ArrayList<String>();
+		for(int i=0; i<5; i++) {
+			phoneList.add(ExcelDataProvider.getExelData("bestBatteryPhones", "TestingData").get(i));
+		}
+		return 	phoneList;
 	}
 }

@@ -16,8 +16,7 @@ public class TestUtility extends TestBase {
 	public static long PAGE_LOAD_TIMEOUT = 2000;
 	public static long IMPLICIT_WAIT = 10;
 
-	
-	//This is for take the screenshot
+	// This is for take the screenshot
 	public static String takeScreenShort(String testCaseName) throws IOException {
 
 		TakesScreenshot screen = (TakesScreenshot) driver;
@@ -28,10 +27,17 @@ public class TestUtility extends TestBase {
 		return str;
 	}
 
-	//This if for move the cursor 
+	// This if for move the cursor
 	public static void moveToElement(WebElement element) {
 		Actions action = new Actions(driver);
 		action.moveToElement(element).build().perform();
+	}
+
+	// Full page scrolling
+	public static void scrollingDownFullPage() throws InterruptedException {
+
+		JavascriptExecutor jse = (JavascriptExecutor) driver;
+		jse.executeScript("window.scrollBy(0,1000)");
 	}
 
 	// Sub page scrolling

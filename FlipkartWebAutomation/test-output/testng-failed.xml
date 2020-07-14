@@ -3,12 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.flipkart.mobileTestCase.AppleMobTestCase">
+      <class name="BestBatteryPhonesTestCases.BestBatteryPhoneTest">
         <methods>
-          <include name="testCaseOpenPage"/>
           <include name="setUp"/>
+          <include name="testClickOnProduct"/>
         </methods>
-      </class> <!-- com.flipkart.mobileTestCase.AppleMobTestCase -->
+      </class> <!-- BestBatteryPhonesTestCases.BestBatteryPhoneTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
