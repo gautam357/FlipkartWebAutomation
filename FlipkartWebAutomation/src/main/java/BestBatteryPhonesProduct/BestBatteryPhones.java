@@ -32,11 +32,15 @@ public class BestBatteryPhones extends TestBase {
 		croseButton.click();
 		TestUtility.scrollingDownFullPage();
 		ArrayList<String> phonelists = ExcelReader.getBestBatteryPhones();
-		 for (int i = 0; i < phonelists.size(); i++) {
+		//System.out.println(phonelists);
+		outer:for (int i = 0; i < phonelists.size(); i++) {
 			for (int j = 0; j < listOfBestBatteryPhones.size(); j++) {
+				System.out.println(listOfBestBatteryPhones.get(j).getText());
+				System.out.println(phonelists.get(i).equalsIgnoreCase(listOfBestBatteryPhones.get(j).getText()));
 				if (phonelists.get(i).equalsIgnoreCase(listOfBestBatteryPhones.get(j).getText())) {
+					System.out.println("gffdhgfjfhgjghjhgjhgjghj");
 					listOfBestBatteryPhones.get(j).click();
-					break;
+					break outer;
 
 				}
 
