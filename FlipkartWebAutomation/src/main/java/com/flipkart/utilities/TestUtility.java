@@ -37,7 +37,7 @@ public class TestUtility extends TestBase {
 	public static void scrollingDownFullPage() throws InterruptedException {
 
 		JavascriptExecutor jse = (JavascriptExecutor) driver;
-		jse.executeScript("window.scrollBy(0,1000)");
+		jse.executeScript("window.scrollBy(0,1100)");
 	}
 
 	// Sub page scrolling

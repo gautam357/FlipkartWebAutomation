@@ -2,7 +2,9 @@ package BestBatteryPhonesProduct;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -16,29 +18,31 @@ import com.flipkart.utilities.TestUtility;
 
 public class BestBatteryPhones extends TestBase {
 
-	@FindBy(xpath = "//div[7]//div//div[2]//div//div//div//div//a//div[2]")
+	@FindBy(xpath = "//div[5]//div[1]//div[2]//div[1]//div[1]//div[1]//div//div[1]//a[1]//div[@class='iUmrbN']")
 	List<WebElement> listOfBestBatteryPhones;
 
 	@FindBy(xpath = "//button[@class='_2AkmmA _29YdH8']")
 	WebElement croseButton;
 
+	@FindBy(xpath = "//span[@class='_35KyD6']")
+	WebElement verificationOpenNewWindos;
+
 	public BestBatteryPhones() {
 		PageFactory.initElements(driver, this);
 	}
 
-	public void clickOnProduct() throws IOException, InterruptedException {
+	public String clickOnProduct() throws IOException, InterruptedException {
 		// LoginWithEmail loginWithId = new LoginWithEmail();
 		// loginWithId.getLogin();
+		String clickedMob = null;
 		croseButton.click();
 		TestUtility.scrollingDownFullPage();
 		ArrayList<String> phonelists = ExcelReader.getBestBatteryPhones();
-		//System.out.println(phonelists);
-		outer:for (int i = 0; i < phonelists.size(); i++) {
+
+		outer: for (int i = 0; i < phonelists.size(); i++) {
 			for (int j = 0; j < listOfBestBatteryPhones.size(); j++) {
-				System.out.println(listOfBestBatteryPhones.get(j).getText());
-				System.out.println(phonelists.get(i).equalsIgnoreCase(listOfBestBatteryPhones.get(j).getText()));
 				if (phonelists.get(i).equalsIgnoreCase(listOfBestBatteryPhones.get(j).getText())) {
-					System.out.println("gffdhgfjfhgjghjhgjhgjghj");
+					clickedMob = phonelists.get(i);
 					listOfBestBatteryPhones.get(j).click();
 					break outer;
 
@@ -46,5 +50,18 @@ public class BestBatteryPhones extends TestBase {
 
 			}
 		}
+		System.out.println(clickedMob.substring(0, 12));
+		return clickedMob.substring(0, 12);
 	}
+
+	public String openNewWindos() {
+		Set<String> allwindows = driver.getWindowHandles();
+		Iterator<String> itr = allwindows.iterator();
+		String parentWindow = itr.next();
+		String childWindor = itr.next();
+		driver.switchTo().window(childWindor);
+		System.out.println(verificationOpenNewWindos.getText().substring(0, 12));
+		return verificationOpenNewWindos.getText().substring(0, 12);
+	}
+
 }
