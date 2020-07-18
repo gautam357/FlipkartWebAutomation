@@ -2,6 +2,8 @@ package com.flipkart.utilities;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Iterator;
+import java.util.Set;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.JavascriptExecutor;
@@ -45,5 +47,17 @@ public class TestUtility extends TestBase {
 		JavascriptExecutor je = (JavascriptExecutor) driver;
 		Thread.sleep(5000);
 		je.executeScript("arguments[0].scrollIntoView(true);", elm);
+	}
+
+	public static void handleMultipleWindows() {
+		Set<String> allwindows = driver.getWindowHandles();
+		Iterator<String> itr = allwindows.iterator();
+		String parentWindow = null;
+		String childWindor = null;
+		while (itr.hasNext()) {
+			parentWindow = itr.next();
+			childWindor = itr.next();
+		}
+		driver.switchTo().window(childWindor);
 	}
 }

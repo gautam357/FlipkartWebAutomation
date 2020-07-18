@@ -5,6 +5,7 @@
     <classes>
       <class name="BestBatteryPhonesTestCases.BestBatteryPhoneTest">
         <methods>
+          <include name="tearDown"/>
           <include name="setUp"/>
           <include name="testClickOnProduct"/>
         </methods>

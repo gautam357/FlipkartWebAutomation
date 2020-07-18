@@ -55,11 +55,7 @@ public class BestBatteryPhones extends TestBase {
 	}
 
 	public String openNewWindos() {
-		Set<String> allwindows = driver.getWindowHandles();
-		Iterator<String> itr = allwindows.iterator();
-		String parentWindow = itr.next();
-		String childWindor = itr.next();
-		driver.switchTo().window(childWindor);
+		TestUtility.handleMultipleWindows();
 		System.out.println(verificationOpenNewWindos.getText().substring(0, 12));
 		return verificationOpenNewWindos.getText().substring(0, 12);
 	}
