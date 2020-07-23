@@ -26,7 +26,7 @@ public class BestBatteryPhoneTest extends TestBase {
 
 	}
 
-	@AfterTest
+	@AfterTest 
 	public void tearDown() {
 		driver.quit();
 	}
